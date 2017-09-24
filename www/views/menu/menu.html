@@ -14,7 +14,7 @@
     <!--<ion-header-bar class="bar-stable">
       <h1 class="title">Left</h1>
     </ion-header-bar>-->
-    <ion-content class="side-background" style="background-color:rgb(78,78,78);">
+    <ion-content class="side-background">
       <div class="row">
         <div class="col col-66">
           <h4 class="light">李帆</h4>
@@ -24,20 +24,32 @@
           <span class="energized-bg light">&nbsp;高级版&nbsp;</span>
         </div>
       </div>
-      <ion-list>
-        <ion-item menu-close ng-click="login()">
-          Login
-        </ion-item>
-        <ion-item menu-close href="#/app/search">
-          Search
-        </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Browse
-        </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
-        </ion-item>
-      </ion-list>
+      <ul class="list side-menu margin-left">
+        <li class="item item-icon-left item-icon-right dark-bg stable" menu-close>
+          <i class="icon ion-social-usd"></i>资金账户
+          <i class="icon ion-ios-arrow-right"></i>
+        </li>
+        <li class="item item-icon-left item-icon-right dark-bg stable" menu-close>
+          <i class="icon ion-social-usd"></i>手机橱窗
+          <i class="icon ion-ios-arrow-right"></i>
+        </li>
+        <li class="item item-icon-left item-icon-right dark-bg stable" menu-close>
+          <i class="icon ion-social-usd"></i>邀请有礼
+          <i class="icon ion-ios-arrow-right"></i>
+        </li>
+        <li class="item item-icon-left item-icon-right dark-bg stable" menu-close>
+          <i class="icon ion-social-usd"></i>开店论坛
+          <i class="icon ion-ios-arrow-right"></i>
+        </li>
+        <li class="item item-icon-left item-icon-right dark-bg stable" menu-close>
+          <i class="icon ion-social-usd"></i>反馈意见
+          <i class="icon ion-ios-arrow-right"></i>
+        </li>
+        <li class="item item-icon-left item-icon-right dark-bg stable" menu-close>
+          <i class="icon ion-social-usd"></i>帮助中心
+          <i class="icon ion-ios-arrow-right"></i>
+        </li>
+      </ul>
     </ion-content>
     <div class="bar bar-footer bar-dark">
       <a class="button button-clear icon-left ion-ios-settings light" style="margin-top:-12px;" menu-close>
