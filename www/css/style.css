@@ -1,1 +1,13 @@
 /* Empty. Add your own CSS if you like */
+.side-background{
+  background-color:rgb(78,78,78);
+}
+.margin-left{
+  margin-left:10px;
+}
+.menu-side li{
+  border-left:none;
+}
+.menu-side li i{
+  font-size:medium!important;
+}
