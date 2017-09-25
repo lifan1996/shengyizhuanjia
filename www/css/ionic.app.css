@@ -9814,16 +9814,3 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
-
-.col-border {
-  border: 1px solid #ececec; }
-
-.quick-action-item {
-  height: 25vw;
-  margin-left: -1px;
-  display: flex;
-  align-items: center;
-  margin-top: -1px; }
-
-.shortcut {
-  height: auto; }

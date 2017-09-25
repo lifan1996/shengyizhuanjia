@@ -5,9 +5,34 @@
 .margin-left{
   margin-left:10px;
 }
-.menu-side li{
+.side-menu li{
   border-left:none;
+  background-color:rgb(78,78,78);
 }
-.menu-side li i{
+.side-menu li i{
   font-size:medium!important;
+}
+.col-border{
+  border:solid 1px #ececec;
+  border-right-style: none;
+  border-bottom-style: none;
+}
+.col-border:last-child{
+  border-right:solid 1px #ececec;
+}
+.row:last-child .col-border{
+  border-bottom: solid 1px #ececec;
+}
+.quick-actions{
+  display: table;
+}
+.quick-action-item{
+  height:25vw;
+  margin-left: -1px;
+  display: flex;
+  align-items: center;
+  margin-top: -1px;
+}
+.shortcut{
+  height: auto;
 }
