@@ -36,3 +36,13 @@
 .shortcut{
   height: auto;
 }
+.on-right{
+  margin-left: 40%;
+  width: 60%;
+}
+.active-item{
+  background-color: #fff;
+  border-left-color: #FF6A3C;
+  border-left-width: 4px;
+  border-left-style: solid;
+}
