@@ -108,10 +108,27 @@
       $ionicActionSheet.show({
         buttons:[
           {
-            text:'<b></b>'
+            text:'<b>新增小分类</b>'
+          },
+          {
+            text:'编辑分类'
           }
-        ]
-      })
+        ],
+        canceText:'取消',
+        buttonClicked:function(index){
+          switch(index){
+            case 0:
+              $scope.gotoAddCategory();
+              break;
+            case 1:
+              break;
+          }
+        },
+        titleText:'更多操作'
+      });
+    };
+    $scope.gotoAddCategory=function () {
+      location.href='#/app/category-add/'+$scope.activeCategory.ID+'/'+$scope.activeCategory.Name;
     }
   }]);
 })();
