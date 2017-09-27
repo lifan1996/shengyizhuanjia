@@ -114,7 +114,7 @@
             text:'编辑分类'
           }
         ],
-        canceText:'取消',
+        cancelText:'取消',
         buttonClicked:function(index){
           switch(index){
             case 0:
