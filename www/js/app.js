@@ -124,6 +124,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
         }
       })
 
+      .state('app.product-add',{
+        url:'/product-add',
+        views:{
+          'menuContent':{
+            templateUrl:'views/product/product-add.html',
+            controller:'ProductAddCtrl'
+          }
+        }
+      })
+
       .state('app.search', {
         url: '/search',
         views: {

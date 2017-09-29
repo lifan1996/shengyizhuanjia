@@ -91,6 +91,7 @@
       }
     ];
     $scope.activeCategory={};
+
     if($scope.categories.length>0){
       $scope.activeCategory=$scope.categories[0];
     }
@@ -102,6 +103,7 @@
     $scope.selectSubCategory=function (data) {
       console.log(data);
       $scope.activeSubCategory=data;
+      CategoryService.updateCategory(data);
       $ionicHistory.goBack();
     };
     $scope.showActionSheet=function () {
@@ -129,6 +131,9 @@
     };
     $scope.gotoAddCategory=function () {
       location.href='#/app/category-add/'+$scope.activeCategory.ID+'/'+$scope.activeCategory.Name;
-    }
+    };
+    $scope.$watch('activeSubCategory',function () {
+      CategoryService.updateCategory($scope.activeSubCategory);
+    });
   }]);
 })();
