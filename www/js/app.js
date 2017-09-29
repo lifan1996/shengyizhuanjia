@@ -104,6 +104,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
         }
       })
 
+      .state('app.setting',{
+        url:'/setting',
+        views:{
+          'menuContent':{
+            templateUrl:'views/setting/setting.html',
+            controller:'SettingCtrl'
+          }
+        }
+      })
+
       .state('app.search', {
         url: '/search',
         views: {
