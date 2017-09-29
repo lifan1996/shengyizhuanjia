@@ -93,6 +93,17 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
         }
       })
 
+      .state('app.shop-edit',{
+        url:'/shop-edit',
+        params:{title:'',property:''},
+        views:{
+          'menuContent':{
+            templateUrl:'views/shop/shop-edit.html',
+            controller:'ShopEditCtrl'
+          }
+        }
+      })
+
       .state('app.search', {
         url: '/search',
         views: {
