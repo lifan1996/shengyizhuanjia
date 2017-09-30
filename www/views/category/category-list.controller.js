@@ -3,7 +3,7 @@
  */
 (function () {
   'use strict';
-  angular.module('starter.controllers').controller('CategoryListCtrl',['$scope','$ionicHistory','$ionicActionSheet',function ($scope,$ionicHistory,$ionicActionSheet) {
+  angular.module('starter.controllers').controller('CategoryListCtrl',['$scope','$ionicHistory','$ionicActionSheet','CategoryService',function ($scope,$ionicHistory,$ionicActionSheet,CategoryService) {
     $scope.categories=[
       {
         ID:1
@@ -91,7 +91,7 @@
       }
     ];
     $scope.activeCategory={};
-
+    $scope.activeSubCategory={};
     if($scope.categories.length>0){
       $scope.activeCategory=$scope.categories[0];
     }
@@ -103,7 +103,6 @@
     $scope.selectSubCategory=function (data) {
       console.log(data);
       $scope.activeSubCategory=data;
-      CategoryService.updateCategory(data);
       $ionicHistory.goBack();
     };
     $scope.showActionSheet=function () {
@@ -133,7 +132,7 @@
       location.href='#/app/category-add/'+$scope.activeCategory.ID+'/'+$scope.activeCategory.Name;
     };
     $scope.$watch('activeSubCategory',function () {
-      CategoryService.updateCategory($scope.activeSubCategory);
+        CategoryService.updateCategory($scope.activeSubCategory);
     });
   }]);
 })();
