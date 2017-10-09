@@ -46,3 +46,7 @@
   border-left-width: 4px;
   border-left-style: solid;
 }
+.product-image{
+  max-height: 80px;
+  max-width: 80px;
+}
