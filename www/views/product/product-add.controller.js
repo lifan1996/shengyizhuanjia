@@ -6,15 +6,28 @@
   angular.module('starter.controllers').controller('ProductAddCtrl',['$scope','CategoryService','$cordovaBarcodeScanner','$cordovaCamera','$cordovaImagePicker','$ionicActionSheet','$ionicPopup',
     function ($scope,CategoryService,$cordovaBarcodeScanner,$cordovaCamera,$cordovaImagePicker,$ionicActionSheet,$ionicPopup) {
     $scope.product={
+      ID:0,
+      Name:'',
       Barcode:'',
       SupplierID:0,
-      Images:['/views/product/img/1.jpg','/views/product/img/2.jpg','/views/product/img/3.jpg'],
+      Price:'',
+      Stock:'',
+      Images:['/views/product/img/1.jpg','/views/product/img/2.jpg'],
       CategoryID:CategoryService.activeCategory.ID,
       Category:{
         ID:CategoryService.activeCategory.ID,
         Name:CategoryService.activeCategory.Name
+      },
+      Supplier:{
+        ID:0,
+        Name:''
       }
     };
+      $scope.supplier={
+        ID:0,
+        Name:'',
+        Phone:''
+      };
     $scope.$on('CategoryUpdate',function (event,data) {
       console.log(data);
       $scope.product.CategoryID=CategoryService.activeCategory.ID;
@@ -32,7 +45,7 @@
       };
       $scope.showActionSheet=function(){
         $ionicActionSheet.show({
-          button:[{text:'拍照'},{text:'从相册中选取'}]
+          buttons:[{text:'拍照'},{text:'从相册中选取'}]
           ,cancelText:'<b>取消</b>'
           ,buttonClicked:function(index){
             switch(index){
@@ -87,13 +100,14 @@
           title:'新增供货商',
           templateUrl:'/views/supplier/supplier-quick-add.html',
           scope:$scope,
-          button:[{
+          buttons:[{
             text:'取消',
             type:'button-outline button-energized'
           },{
             text:'确定',
             type:'button-energized',
             onTap:function(){
+              console.log($scope.supplier);
               $scope.product.Supplier.Name=$scope.supplier.Name;
             }
           }],
