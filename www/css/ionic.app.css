@@ -9814,3 +9814,24 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+.toast-container {
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.8s;
+  transition: opacity 0.8s;
+  z-index: 10; }
+  .toast-container.active {
+    opacity: 1; }
+
+.toast-message {
+  width: 270px;
+  margin: 5px auto;
+  padding: 5px;
+  background-color: #444;
+  text-align: center;
+  color: #fff;
+  border-radius: 7px;
+  font-size: 14px; }
