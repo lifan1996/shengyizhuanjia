@@ -26,7 +26,7 @@
       <div class="list" expander-directive>
         <label class="item item-input" for="">
           <span class="input-label">售价<span class="energized">*</span></span>
-          <input type="text" placeholder="输入商品售价">
+          <input name="price" type="text" placeholder="输入商品售价" ng-model="product.Price" ng-pattern="/^\d+(.\d{1,2})?$/">
         </label>
         <label class="item item-input" for="">
           <span class="input-label">进价</span>
